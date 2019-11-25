@@ -188,8 +188,8 @@ class Delogo
 
                     // If the pixel is "true", paint it.
                     if($pixel === 1) {
-                        // Paint it black.
-                        $draw->setFillColor(new ImagickPixel('#000000'));
+                        // Brand it.
+                        $draw->setFillColor(new ImagickPixel($this->deJade()));
                         $draw->rectangle($this->x, $this->y, $this->x + $this->size - 1, $this->y + $this->size - 1);
                         // Counted.
                         $this->ones++;
@@ -221,6 +221,16 @@ class Delogo
     public function __toString()
     {
         return $this->text;
+    }
+
+    public function deJade() {
+        $r = mt_rand(0, 127);
+        $g = mt_rand(127, 255);
+        $b = mt_rand(0, 191);
+
+        $color = "rgba($r, $g, $b, .5)";
+
+        return $color;
     }
 
     public function display()
