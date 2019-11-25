@@ -151,9 +151,8 @@ class Delogo
         // Get the length of the text (multi byte save).
         $length = mb_strlen($this->text);
 
-        // Set the x position to the size.
-        $this->width = $this->x = $this->size;
-        $this->y = 0;
+        // Set the positions to the size so we get some sensible whitespace.
+        $this->width = $this->x = $this->y = $this->size;
         // Set the height to eleven times the size.
         $this->height = $this->size * self::HEIGHT_MULTIPLIER;
 
