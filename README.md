@@ -30,3 +30,10 @@ echo $logo;
 - [ ] CMYK-versie.
 - [ ] GIF-versie.
 - [ ] [_WebP_](https://developers.google.com/speed/webp)-versie.
+- [ ] ASCII-versie.
+- [ ] Thema’s terugbrengen (zie eerdere implementaties).
+- [ ] Palet tijdsgeboden laten beïnvloeden (zie @deidee/dedate).
+- [ ] Weg kunnen schrijven naar een map.
+- [ ] Een plek geven op hetCDN.
+- [ ] Karakterset uitbreiden.
+- [ ] Een makkelijkere manier vinden om karakters te definiëren.

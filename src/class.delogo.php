@@ -189,7 +189,9 @@ class Delogo
                     if($pixel === 1) {
                         // Brand it.
                         $draw->setFillColor(new ImagickPixel($this->deJade()));
-                        $draw->rectangle($this->x, $this->y, $this->x + $this->size - 1, $this->y + $this->size - 1);
+                        $x2 = $this->x + $this->size + mt_rand(-1, 2);
+                        $y2 = $this->y + $this->size + mt_rand(-1, 2);
+                        $draw->rectangle($this->x, $this->y, $x2, $y2);
                         // Counted.
                         $this->ones++;
                     } elseif($pixel === 0) {
