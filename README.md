@@ -37,3 +37,4 @@ echo $logo;
 - [ ] Een plek geven op hetCDN.
 - [ ] Karakterset uitbreiden.
 - [ ] Een makkelijkere manier vinden om karakters te definiëren.
+- [ ] Basisvorm kunnen definiëren (standaard vierkant).

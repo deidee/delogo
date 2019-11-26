@@ -148,13 +148,32 @@ class Delogo
 
         // Set the text.
         $this->setText($str);
-        // Get the length of the text (multi byte save).
-        $length = mb_strlen($this->text);
 
         // Set the positions to the size so we get some sensible whitespace.
         $this->width = $this->x = $this->y = $this->size;
         // Set the height to eleven times the size.
         $this->height = $this->size * self::HEIGHT_MULTIPLIER;
+    }
+
+    public function __toString()
+    {
+        return $this->text;
+    }
+
+    public function deJade() {
+        $r = mt_rand(0, 127);
+        $g = mt_rand(127, 255);
+        $b = mt_rand(0, 191);
+
+        $color = "rgba($r, $g, $b, .5)";
+
+        return $color;
+    }
+
+    public function display()
+    {
+        // Get the length of the text (multi byte save).
+        $length = mb_strlen($this->text);
 
         // Start a basic drawing context, even though we don't know the actual width yet.
         $draw = new ImagickDraw();
@@ -217,25 +236,7 @@ class Delogo
         $this->im->setImageFormat($this->type);
 
         $this->im->drawImage($draw);
-    }
 
-    public function __toString()
-    {
-        return $this->text;
-    }
-
-    public function deJade() {
-        $r = mt_rand(0, 127);
-        $g = mt_rand(127, 255);
-        $b = mt_rand(0, 191);
-
-        $color = "rgba($r, $g, $b, .5)";
-
-        return $color;
-    }
-
-    public function display()
-    {
         header('Content-Type: ' . $this->im->getImageMimeType());
 
         echo $this->im->getImageBlob();
@@ -244,5 +245,10 @@ class Delogo
     public function setText($str = '')
     {
         $this->text = $str;
+    }
+
+    public function setType($type = '')
+    {
+        $this->type = $type;
     }
 }
