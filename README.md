@@ -2,7 +2,7 @@
 
 Ons bekende blokjeslogo kent verschillende implementaties in [_Python_](https://www.python.org/), [_Java_](https://www.java.com/) en [_PHP GD_](https://www.php.net/manual/en/book.image.php).
 
-Dit is een poging de code bij elkaar te brengen, op te schonen en openbaar te maken. Qua techniek is voor [_PHP ImageMagick_](https://www.php.net/manual/en/book.imagick.php) gevallen.
+Dit is een poging de code bij elkaar te brengen, op te schonen en openbaar te maken. Qua techniek is voor [_PHP ImageMagick_](https://www.php.net/manual/en/book.imagick.php) gekozen.
 
 ## Gebruik
 
@@ -11,6 +11,28 @@ $logo = new Delogo('tekst');
 $logo->size = 24;
 echo $logo;
 ```
+
+## Implementatie
+
+### Bitmapversie met witte achtergrond
+
+```html
+<img alt="jeIdee" src="https://deidee.com/logo.jpg?str=jeIdee">
+```
+
+### Semi-transparante bitmapversie
+
+```html
+<img alt="jeIdee" src="https://deidee.com/logo.png?str=jeIdee">
+```
+
+### Semi-transparante vectorversie
+
+```html
+<img alt="jeIdee" src="https://deidee.com/logo.png?str=jeIdee">
+```
+
+Let op: De versies die via deze URL’s worden binnengehaald betreffen een oudere, maar meer uitgebreide versie van het beeldmerk. Het is de bedoeling dat ook deze vervangen worden door de versie uit deze repository, op het moment dat deze volwassen genoeg is.
 
 ## Te doen
 
