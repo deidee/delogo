@@ -34,6 +34,28 @@ echo $logo;
 
 Let op: De versies die via deze URL’s worden binnengehaald betreffen een oudere, maar meer uitgebreide versie van het beeldmerk. Het is de bedoeling dat ook deze vervangen worden door de versie uit deze repository, op het moment dat deze volwassen genoeg is.
 
+## Variaties
+
+### Koningsdag
+
+![deidee](https://deidee.com/logo.png?date=2019-04-27)
+
+### Dodenherdenking
+
+![deidee](https://deidee.com/logo.png?date=2019-05-04)
+
+### Borstkankermaand
+
+![deidee](https://deidee.com/logo.png?date=2019-10-1)
+
+### Wereldaidsdag
+
+![deidee](https://deidee.com/logo.png?date=2019-12-01)
+
+### Eerste kerstdag
+
+![deidee](https://deidee.com/logo.png?date=2019-12-25)
+
 ## Te doen
 
 - [ ] Elke kolom afzonderlijk kunnen beïnvloeden.
