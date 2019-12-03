@@ -29,7 +29,7 @@ echo $logo;
 ### Semi-transparante vectorversie
 
 ```html
-<img alt="jeIdee" src="https://deidee.com/logo.png?str=jeIdee">
+<img alt="jeIdee" src="https://deidee.com/logo.svg?str=jeIdee">
 ```
 
 Let op: De versies die via deze URL’s worden binnengehaald betreffen een oudere, maar meer uitgebreide versie van het beeldmerk. Het is de bedoeling dat ook deze vervangen worden door de versie uit deze repository, op het moment dat deze volwassen genoeg is.
