@@ -54,7 +54,7 @@ Let op: De versies die via deze URL’s worden binnengehaald betreffen een ouder
 
 ### Eerste kerstdag
 
-![deidee](https://deidee.com/logo.png?date=2019-12-31)
+![deidee](https://deidee.com/logo.png?date=2019-12-25)
 
 ## Te doen
 
