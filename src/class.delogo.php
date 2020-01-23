@@ -247,6 +247,11 @@ class Delogo
         echo $this->im->getImageBlob();
     }
 
+    public function setHeight($height)
+    {
+        $this->height = $height;
+    }
+
     public function setText($str = '')
     {
         $this->text = $str;
@@ -260,5 +265,15 @@ class Delogo
     public function setWidth($width)
     {
         $this->width = $width;
+    }
+
+    public function setX($x)
+    {
+        $this->x = $x;
+    }
+
+    public function setY($y)
+    {
+        $this->y = $y;
     }
 }
