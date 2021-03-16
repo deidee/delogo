@@ -7,7 +7,7 @@ Dit is een poging de code bij elkaar te brengen, op te schonen en openbaar te ma
 ## Gebruik
 
 ```php
-$logo = new Delogo('tekst');
+$logo = new deidee\Delogo('tekst');
 $logo->size = 24;
 echo $logo;
 ```
