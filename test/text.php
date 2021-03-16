@@ -2,5 +2,5 @@
 
 require_once '../src/class.delogo.php';
 
-$logo = new Delogo;
+$logo = new deidee\Delogo;
 echo $logo;

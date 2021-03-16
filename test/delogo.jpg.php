@@ -2,6 +2,6 @@
 
 require_once '../src/class.delogo.php';
 
-$logo = new Delogo('delogo.jpg');
+$logo = new deidee\Delogo('delogo.jpg');
 $logo->setType('jpg');
 $logo->display();
