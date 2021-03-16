@@ -1,0 +1,13 @@
+{
+    "name": "deidee/delogo",
+    "description": "DeLogo van deidee.",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "ACJ",
+            "email": "gitlab@acjs.net"
+        }
+    ],
+    "require": {}
+}
