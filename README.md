@@ -8,7 +8,7 @@ Dit is een poging de code bij elkaar te brengen, op te schonen en openbaar te ma
 
 ```php
 $logo = new deidee\Delogo('tekst');
-$logo->size = 24;
+$logo->setSize(24);
 echo $logo;
 ```
 

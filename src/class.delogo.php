@@ -8,7 +8,7 @@ class Delogo
     const HEIGHT_MULTIPLIER = 11;
     const ROWS = 9;
     const VENDOR = 'deidee';
-    const RED = '#ff0000';
+    const RED = '#ff0000'; // The "foo" of colors. Used for testing.
     const WHITE = '#ffffff';
 
     private $c = []; // Collection of characters.
@@ -253,6 +253,11 @@ class Delogo
     public function setHeight($height)
     {
         $this->height = $height;
+    }
+
+    public function setSize($size)
+    {
+        $this->size = $size;
     }
 
     public function setText($str = '')
