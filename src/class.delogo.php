@@ -3,6 +3,10 @@ declare(strict_types = 1);
 
 namespace deidee;
 
+use Imagick;
+use ImagickDraw;
+use ImagickPixel;
+
 class Delogo
 {
     const HEIGHT_MULTIPLIER = 11;
