@@ -102,11 +102,8 @@ class Delogo
 
                     // If the pixel is "true", paint it.
                     if($pixel === 1) {
+                        $rect = new SVGRect($this->x, $this->y, $this->size + mt_rand(0, 3), $this->size + mt_rand(0, 3));
                         // Brand it.
-                        //$draw->setFillColor(new ImagickPixel($this->deJade()));
-                        $x2 = $this->x + $this->size + mt_rand(-1, 2);
-                        $y2 = $this->y + $this->size + mt_rand(-1, 2);
-                        $rect = new SVGRect($this->x, $this->y, $this->size, $this->size);
                         $rect->setStyle('fill', $this->deJade());
                         $this->doc->addChild($rect);
                         // Counted.
