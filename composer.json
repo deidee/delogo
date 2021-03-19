@@ -12,6 +12,7 @@
     "require": {
         "meyfa/php-svg": "^0.11.0",
         "ext-mbstring": "*",
-        "ext-imagick": "*"
+        "ext-imagick": "*",
+        "ext-gd": "*"
     }
 }
