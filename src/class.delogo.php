@@ -84,6 +84,8 @@ class Delogo
             // If we know this character, draw it.
             if(isset($this->c[mb_ord($char)])) {
                 $pixels = $this->c[mb_ord($char)];
+                // Apply correction for space characters.
+                if(empty($pixels)) $this->y += 8 * $this->size;
                 // We know the rows and the pixels, so we can calculate the columns.
                 $columns = count($pixels) / self::ROWS;
                 $column = 0;
