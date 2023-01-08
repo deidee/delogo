@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "meyfa/php-svg": "^0.11.0",
+        "meyfa/php-svg": "*",
         "ext-mbstring": "*",
         "ext-imagick": "*",
         "ext-gd": "*"

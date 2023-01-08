@@ -4,29 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a8c798067714ce3cf7bbfe18d25980e",
+    "content-hash": "d81709352b26e05561091be50973ab78",
     "packages": [
         {
             "name": "meyfa/php-svg",
-            "version": "v0.11.0",
+            "version": "v0.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/meyfa/php-svg.git",
-                "reference": "d86c7e4a2d7c2e226c254dcbcffabcd050e05750"
+                "reference": "c2c59ecc000c207c6ef22b826617e79d4b2ee450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/meyfa/php-svg/zipball/d86c7e4a2d7c2e226c254dcbcffabcd050e05750",
-                "reference": "d86c7e4a2d7c2e226c254dcbcffabcd050e05750",
+                "url": "https://api.github.com/repos/meyfa/php-svg/zipball/c2c59ecc000c207c6ef22b826617e79d4b2ee450",
+                "reference": "c2c59ecc000c207c6ef22b826617e79d4b2ee450",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.3.0"
             },
             "require-dev": {
-                "meyfa/phpunit-assert-gd": "^1.1",
-                "phpmd/phpmd": "@stable",
-                "phpunit/phpunit": "^4.8"
+                "meyfa/phpunit-assert-gd": "^v3.0.0",
+                "phpmd/phpmd": "^2.13.0",
+                "phpunit/phpunit": "^9.5.26"
             },
             "suggest": {
                 "ext-gd": "Needed to rasterize images",
@@ -45,7 +45,7 @@
             "authors": [
                 {
                     "name": "Fabian Meyer",
-                    "homepage": "http://meyfa.net"
+                    "homepage": "https://meyfa.net"
                 }
             ],
             "description": "Read, edit, write, and render SVG files with PHP",
@@ -53,7 +53,11 @@
             "keywords": [
                 "svg"
             ],
-            "time": "2020-12-04T20:41:56+00:00"
+            "support": {
+                "issues": "https://github.com/meyfa/php-svg/issues",
+                "source": "https://github.com/meyfa/php-svg/tree/v0.14.0"
+            },
+            "time": "2023-01-02T21:26:55+00:00"
         }
     ],
     "packages-dev": [],
@@ -68,5 +72,5 @@
         "ext-gd": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }
