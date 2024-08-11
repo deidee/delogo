@@ -21,6 +21,8 @@ class DeLogo
     private $ones;
     private $zeros;
 
+    protected $text = self::VENDOR;
+
     public function __construct($str = self::VENDOR, $settings = [])
     {
         global $c;

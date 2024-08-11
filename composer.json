@@ -9,6 +9,9 @@
             "email": "gitlab@acjs.net"
         }
     ],
+    "autoload": {
+        "psr-4": {"deidee\\": "src/"}
+    },
     "require": {
         "meyfa/php-svg": "*",
         "ext-mbstring": "*",
