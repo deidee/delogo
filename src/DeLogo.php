@@ -3,8 +3,6 @@ declare(strict_types = 1);
 
 namespace deidee;
 
-require_once dirname(__DIR__) . '/data/chars.php';
-
 class DeLogo
 {
     const HEIGHT_MULTIPLIER = 11;
@@ -25,8 +23,9 @@ class DeLogo
 
     public function __construct($str = self::VENDOR, $settings = [])
     {
-        global $c;
+        require_once dirname(__DIR__) . '/data/chars.php';
 
+        /** @var array $c */
         $this->c = $c;
 
         // Set the text.
@@ -47,6 +46,8 @@ class DeLogo
         {
             // Isolate a character from the text string (multi-byte safe).
             $char = mb_substr($this->text, $i, 1);
+
+            var_dump(mb_ord($char));
 
             // If we know this character, draw it.
             if(isset($this->c[mb_ord($char)])) {

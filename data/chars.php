@@ -4,6 +4,7 @@ declare(strict_types = 1);
 namespace deidee;
 
 $c = [];
+$c['.notdef'] = array(1,1,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,1,1);
 
 // All characters data taken from old deidee libraries.
 $c[0x20] = array(); //[SPACE]
