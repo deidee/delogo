@@ -1,8 +1,10 @@
 # ![delogo](https://deidee.com/logo.png?str=deLogo)
 
-Ons bekende blokjeslogo kent verschillende implementaties in [_Python_](https://www.python.org/), [_Java_](https://www.java.com/) en [_PHP GD_](https://www.php.net/manual/en/book.image.php).
+Ons blokjeslogo kent verschillende implementaties in [_Python_](https://www.python.org/), [_Java_](https://www.java.com/) en [_PHP GD_](https://www.php.net/manual/en/book.image.php).
 
 Dit is een poging de code bij elkaar te brengen, op te schonen en openbaar te maken. Qua techniek is voor [_PHP ImageMagick_](https://www.php.net/manual/en/book.imagick.php) gekozen.
+
+**Let op:** Deze versie is nog _niet_ in gebruik op productie.
 
 ## Gebruik
 
@@ -31,8 +33,6 @@ echo $logo;
 ```html
 <img alt="jeIdee" src="https://deidee.com/logo.svg?str=jeIdee">
 ```
-
-Let op: De versies die via deze URL’s worden binnengehaald betreffen een oudere, maar meer uitgebreide versie van het beeldmerk. Het is de bedoeling dat ook deze vervangen worden door de versie uit deze repository, op het moment dat deze volwassen genoeg is.
 
 ## Variaties
 
@@ -65,7 +65,7 @@ Let op: De versies die via deze URL’s worden binnengehaald betreffen een ouder
 - [ ] Elke regel afzonderlijk kunnen beïnvloeden.
 - [ ] Kleurenpalet vullen.
 - [ ] Kleurenpalet kunnen beïnvloeden.
-- [ ] SVG-versie.
+- [x] SVG-versie.
 - [ ] Geanimeerde SVG-versie.
 - [ ] Transparante achtergrond voor PNG-versie.
 - [ ] Achtergrondkleur in kunnen stellen.
@@ -76,9 +76,9 @@ Let op: De versies die via deze URL’s worden binnengehaald betreffen een ouder
 - [ ] [_WebP_](https://developers.google.com/speed/webp)-versie.
 - [ ] ASCII-versie.
 - [ ] Thema’s terugbrengen (zie eerdere implementaties).
-- [ ] Palet tijdsgeboden laten beïnvloeden (zie @deidee/dedate).
+- [ ] Palet tijdsgebonden laten beïnvloeden (zie [@deidee/dedate](@deidee/dedate)).
 - [ ] Weg kunnen schrijven naar een map.
-- [ ] Een plek geven op hetCDN.
+- [ ] Een plek geven op deLogo.
 - [ ] Karakterset uitbreiden.
 - [ ] Een makkelijkere manier vinden om karakters te definiëren.
 - [ ] Basisvorm kunnen definiëren (standaard vierkant).

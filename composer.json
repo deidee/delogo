@@ -16,6 +16,7 @@
         "meyfa/php-svg": "*",
         "ext-mbstring": "*",
         "ext-imagick": "*",
-        "ext-gd": "*"
+        "ext-gd": "*",
+        "ext-fileinfo": "*"
     }
 }
