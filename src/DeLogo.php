@@ -28,6 +28,8 @@ class DeLogo
     private $image;
     // This is where the SVG document root will live when building.
     private $doc;
+    // This is where we store colors.
+    private $palette = array();
 
     protected $text = self::VENDOR;
     protected $type = self::DEFAULT_TYPE;
@@ -84,6 +86,8 @@ class DeLogo
                 $this->addWidth($width);
             }
         }
+
+        $this->populatePalette();
     }
 
     public function build()
@@ -104,6 +108,7 @@ class DeLogo
         $this->doc->setAttribute('viewBox', "0 0 {$this->width} {$this->height}");
 
         $length = mb_strlen($this->text);
+        $one = 0;
 
         for($i = 0; $i < $length; ++$i) {
             $char = mb_substr($this->text, $i, 1);
@@ -130,7 +135,8 @@ class DeLogo
                     if($pixel === 1) {
                         $rect = new SVGRect($this->x, $this->y, $this->size + mt_rand(0, 3), $this->size + mt_rand(0, 3));
                         // Brand it.
-                        $rect->setStyle('fill', $this->deJade());
+                        $rect->setStyle('fill', $this->palette[$one]);
+                        $one++;
                         $this->doc->addChild($rect);
                     } else {
                         // Skip.
@@ -205,6 +211,13 @@ class DeLogo
     public function getZeros(): int
     {
         return $this->zeros;
+    }
+
+    protected function populatePalette()
+    {
+        for($i = 0; $i < $this->ones; $i++) {
+            $this->palette[] = $this->deJade();
+        }
     }
 
     public function setType($type = self::DEFAULT_TYPE)
