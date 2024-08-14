@@ -40,7 +40,7 @@ class DeLogo
 
     public function __construct($str = self::VENDOR, $settings = [])
     {
-        require_once dirname(__DIR__) . '/data/chars.php';
+        require dirname(__DIR__) . '/data/chars.php';
 
         /** @var array $c */
         $this->c = $c;
