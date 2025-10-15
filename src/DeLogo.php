@@ -260,7 +260,7 @@ class DeLogo
         switch($this->type):
             case self::DEFAULT_TYPE;
             default:
-                return $this->image->toXMLString();
+                return $this->image->toXMLString($this->standalone);
         endswitch;
     }
 
@@ -271,7 +271,7 @@ class DeLogo
             default:
                 header('Content-Type: ' . $this->getMimeType());
 
-                echo $this->image->toXMLString($this->standalone);
+                echo $this;
         endswitch;
     }
 
