@@ -27,6 +27,7 @@ class Delogo
     private $height = 300;
     private $width = 300;
     private $size = 24;
+    private $standalone = true;
     public $text;
     public $ones = 0;
     public $zeros = 0;
@@ -147,7 +148,7 @@ class Delogo
         // Set the appropriate MIME type.
         header('Content-Type: image/svg+xml');
 
-        echo $this->image;
+        echo $this->image->toXMLString($this->standalone);
     }
 
     public function setHeight($height)
