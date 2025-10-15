@@ -4,6 +4,8 @@ declare(strict_types = 1);
 namespace deidee;
 
 use SVG\Nodes\Shapes\SVGRect as SVGRect;
+use SVG\Nodes\Structures\SVGGroup;
+use SVG\Nodes\Texts\SVGDesc;
 use SVG\SVG as SVG;
 
 class DeLogo
@@ -30,6 +32,7 @@ class DeLogo
     private $doc;
     // This is where we store colors.
     private $palette = array();
+    public $standalone = true;
 
     protected $text = self::VENDOR;
     protected $type = self::DEFAULT_TYPE;
@@ -107,6 +110,14 @@ class DeLogo
         $this->doc = $this->image->getDocument();
         $this->doc->setAttribute('viewBox', "0 0 {$this->width} {$this->height}");
 
+        $desc = new SVGDesc;
+        $desc->setValue('deidee logo.');
+        $this->doc->addChild($desc);
+
+        $g = new SVGGroup;
+        $g->setAttribute('class', 'logotype');
+        $g->setAttribute('aria-label', $this->text);
+
         $length = mb_strlen($this->text);
         $one = 0;
 
@@ -137,7 +148,7 @@ class DeLogo
                         // Brand it.
                         $rect->setStyle('fill', $this->palette[$one]);
                         $one++;
-                        $this->doc->addChild($rect);
+                        $g->addChild($rect);
                     } else {
                         // Skip.
                     }
@@ -151,6 +162,8 @@ class DeLogo
                 $this->y -= $this->size * 8;
             }
         }
+
+        $this->doc->addChild($g);
     }
 
     public function addWidth($width)
@@ -258,7 +271,7 @@ class DeLogo
             default:
                 header('Content-Type: ' . $this->getMimeType());
 
-                echo $this;
+                echo $this->image->toXMLString($this->standalone);
         endswitch;
     }
 
