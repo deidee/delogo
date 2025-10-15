@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d81709352b26e05561091be50973ab78",
+    "content-hash": "f8aa8b24aaaddf91dc49fa1bfc4a9c99",
     "packages": [
         {
             "name": "meyfa/php-svg",
-            "version": "v0.16.0",
+            "version": "v0.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/meyfa/php-svg.git",
-                "reference": "efb03d8b1448cb1002977c3588a3d32c24364288"
+                "reference": "a62c2b9842826e83ea51f9b9e6ed28d2bdb1033c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/meyfa/php-svg/zipball/efb03d8b1448cb1002977c3588a3d32c24364288",
-                "reference": "efb03d8b1448cb1002977c3588a3d32c24364288",
+                "url": "https://api.github.com/repos/meyfa/php-svg/zipball/a62c2b9842826e83ea51f9b9e6ed28d2bdb1033c",
+                "reference": "a62c2b9842826e83ea51f9b9e6ed28d2bdb1033c",
                 "shasum": ""
             },
             "require": {
@@ -56,15 +56,9 @@
             ],
             "support": {
                 "issues": "https://github.com/meyfa/php-svg/issues",
-                "source": "https://github.com/meyfa/php-svg/tree/v0.16.0"
+                "source": "https://github.com/meyfa/php-svg/tree/v0.16.1"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/meyfa",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-07-12T11:40:56+00:00"
+            "time": "2025-03-10T22:28:37+00:00"
         }
     ],
     "packages-dev": [],
@@ -76,7 +70,8 @@
     "platform": {
         "ext-mbstring": "*",
         "ext-imagick": "*",
-        "ext-gd": "*"
+        "ext-gd": "*",
+        "ext-fileinfo": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"

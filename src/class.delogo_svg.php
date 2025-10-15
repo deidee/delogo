@@ -24,13 +24,14 @@ class Delogo
     private $height = 300;
     private $width = 300;
     private $size = 24;
-    private $text;
+    public $text;
     public $ones = 0;
     public $zeros = 0;
     public $x = 0;
     public $y = 0;
     public $image;
     public $doc;
+    public $lines = 1;
 
     public function __construct($str = self::VENDOR, $settings = [])
     {
@@ -40,6 +41,8 @@ class Delogo
 
         // Set the text.
         $this->setText($str);
+        // Set the number of lines.
+        $this->setLines($str);
 
         // Set the positions to the size so we get some sensible whitespace.
         $this->width = $this->x = $this->y = $this->size;
@@ -137,6 +140,11 @@ class Delogo
     public function setHeight($height)
     {
         $this->height = $height;
+    }
+
+    public function setLines($str)
+    {
+        $this->lines = 1 + mb_substr_count($str, PHP_EOL);
     }
 
     public function setSize($size)
