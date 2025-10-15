@@ -27,7 +27,7 @@ class Delogo
     private $height = 300;
     private $width = 300;
     private $size = 24;
-    private $standalone = true;
+    public $standalone = true;
     public $text;
     public $ones = 0;
     public $zeros = 0;
