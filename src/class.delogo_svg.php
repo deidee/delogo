@@ -7,6 +7,9 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 require_once dirname(__DIR__) . '/data/chars.php';
 
 use SVG\Nodes\Shapes\SVGRect as SVGRect;
+use SVG\Nodes\Structures\SVGGroup;
+use SVG\Nodes\Texts\SVGDesc;
+use SVG\Nodes\Texts\SVGText;
 use SVG\SVG as SVG;
 
 class Delogo
@@ -78,6 +81,15 @@ class Delogo
         // Start a basic drawing context, even though we don't know the actual width yet.
         $this->image = new SVG($this->width, $this->height);
         $this->doc = $this->image->getDocument();
+        $this->doc->setAttribute('class', 'logo--deidee');
+
+        $desc = new SVGDesc;
+        $desc->setValue('deidee logo.');
+        $this->doc->addChild($desc);
+
+        $g = new SVGGroup;
+        $g->setAttribute('class', 'logotype');
+        $g->setAttribute('aria-label', $this->text);
 
         // Loop through the characters of the text.
         for($i = 0; $i < $length; ++$i)
@@ -110,7 +122,7 @@ class Delogo
                         $rect = new SVGRect($this->x, $this->y, $this->size + mt_rand(0, 3), $this->size + mt_rand(0, 3));
                         // Brand it.
                         $rect->setStyle('fill', $this->deJade());
-                        $this->doc->addChild($rect);
+                        $g->addChild($rect);
                         // Counted.
                         $this->ones++;
                     } elseif($pixel === 0) {
@@ -130,6 +142,7 @@ class Delogo
             }
         }
 
+        $this->doc->addChild($g);
 
         // Set the appropriate MIME type.
         header('Content-Type: image/svg+xml');
