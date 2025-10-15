@@ -109,6 +109,7 @@ class DeLogo
         $this->image = new SVG;
         $this->doc = $this->image->getDocument();
         $this->doc->setAttribute('viewBox', "0 0 {$this->width} {$this->height}");
+        $this->doc->setAttribute('class', 'logo--deidee');
 
         $desc = new SVGDesc;
         $desc->setValue('deidee logo.');
