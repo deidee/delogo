@@ -35,6 +35,7 @@ class DeLogo
     public $standalone = true;
 
     protected $text = self::VENDOR;
+    protected $date;
     protected $type = self::DEFAULT_TYPE;
     protected $x = self::DEFAULT_SIZE;
     protected $y = self::DEFAULT_SIZE;
@@ -47,6 +48,8 @@ class DeLogo
 
         /** @var array $c */
         $this->c = $c;
+
+        $this->date = new \DateTime;
 
         // Set the text.
         $this->setText($str);
@@ -61,12 +64,12 @@ class DeLogo
         // Reset the width.
         $this->setWidth($this->x);
 
-        // Get the length of the text (multi-byte safe).
+        // Get the length of the text (multibyte safe).
         $length = mb_strlen($this->text);
 
         for($i = 0; $i < $length; ++$i)
         {
-            // Isolate a character from the text string (multi-byte safe).
+            // Isolate a character from the text string (multibyte safe).
             $char = mb_substr($this->text, $i, 1);
 
             // If we know this character, draw it.
@@ -229,8 +232,13 @@ class DeLogo
 
     protected function populatePalette()
     {
-        for($i = 0; $i < $this->ones; $i++) {
+        for($i = 0; $i <= $this->ones; $i++) {
             $this->palette[] = $this->deJade();
+        }
+
+        if($this->date->format('n') == 10) {
+            $this->palette[0] = 'rgba(255, 68, 136, .5)';
+            shuffle($this->palette);
         }
     }
 
