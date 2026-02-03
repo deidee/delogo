@@ -151,6 +151,7 @@ class DeLogo
                         $rect = new SVGRect($this->x, $this->y, $this->size + mt_rand(0, 3), $this->size + mt_rand(0, 3));
                         // Brand it.
                         $rect->setStyle('fill', $this->palette[$one]);
+                        //$rect->setAttribute('stroke', 'black');
                         $one++;
                         $g->addChild($rect);
                     } else {
